@@ -247,48 +247,29 @@ return [
         ],
         ['header' => 'CHANGE WEBSITE'],
         [
+            'text' => 'navbar',
+            'url'  => '#',
+            'icon' => 'fas fa-fw fa-lock',
+        ],
+        [
             'text'    => 'Home',
             'icon'    => 'fas fa-fw fa-share',
             'submenu' => [
                 [
-                    'text' => 'Menu',
-                    'url'  => '#',
-                ],
-                [
-                    'text'    => 'Bannière',
-                    'url'     => '#',
-                ],
-                [
-                    'text' => 'Services rapides',
-                    'url'  => '#',
-                ],
-                [
-                    'text' => 'Présentation',
-                    'url'  => '#',
-                ],
-                [
-                    'text' => 'Vidéo',
-                    'url'  => '#',
-                ],
-                [
-                    'text' => 'Testimonials',
-                    'url'  => '#',
-                ],
-                [
                     'text' => 'Services',
-                    'url'  => '#',
+                    'url'  => '/adminServices',
+                ],
+                [
+                    'text' => 'Banniere',
+                    'url'  => '/adminBanniere',
                 ],
                 [
                     'text' => 'Team',
-                    'url'  => '#',
+                    'url'  => '/adminTeam',
                 ],
                 [
-                    'text' => 'Ready?',
-                    'url'  => '#',
-                ],
-                [
-                    'text' => 'Infos contact/formulaire',
-                    'url'  => '#',
+                    'text' => 'Temoignage',
+                    'url'  => '/adminTemoignage',
                 ],
             ],
         ],
@@ -296,94 +277,18 @@ return [
             'text'    => 'Services',
             'icon'    => 'fas fa-fw fa-share',
             'submenu' => [
-                [
-                    'text' => 'Menu',
-                    'url'  => '#',
-                ],
-                [
-                    'text'    => 'Bannière',
-                    'url'     => '#',
-                ],
-                [
-                    'text' => 'Services',
-                    'url'  => '#',
-                ],
-                [
-                    'text' => 'Services primés',
-                    'url'  => '#',
-                ],
-                [
-                    'text' => 'Blog rapides',
-                    'url'  => '#',
-                ],
-                [
-                    'text' => 'Newsletter',
-                    'url'  => '#',
-                ],
-                [
-                    'text' => 'Formulaire de contact',
-                    'url'  => '#',
-                ],
-                [
-                    'text' => 'Infos contact',
-                    'url'  => '#',
-                ],
             ],
         ],
         [
             'text'    => 'Blog',
             'icon'    => 'fas fa-fw fa-share',
             'submenu' => [
-                [
-                    'text' => 'Menu',
-                    'url'  => '#',
-                ],
-                [
-                    'text'    => 'Bannière',
-                    'url'     => '#',
-                ],
-                [
-                    'text' => 'Articles',
-                    'url'  => '#',
-                ],
-                [
-                    'text' => 'Recherche',
-                    'url'  => '#',
-                ],
-                [
-                    'text' => 'Catégories',
-                    'url'  => '#',
-                ],
-                [
-                    'text' => 'Tags',
-                    'url'  => '#',
-                ],
             ],
         ],
         [
             'text'    => 'Contact',
             'icon'    => 'fas fa-fw fa-share',
             'submenu' => [
-                [
-                    'text' => 'Menu',
-                    'url'  => '#',
-                ],
-                [
-                    'text'    => 'Bannière',
-                    'url'     => '#',
-                ],
-                [
-                    'text' => 'Google map',
-                    'url'  => '#',
-                ],
-                [
-                    'text' => 'Formulaire de contact',
-                    'url'  => '#',
-                ],
-                [
-                    'text' => 'Infos contact',
-                    'url'  => '#',
-                ],
             ],
         ],
         
