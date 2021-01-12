@@ -76,7 +76,7 @@
 					</div>
 				</div>
 				<div class="text-center mt60">
-					<a href="" class="site-btn">Browse</a>
+					<a href="#contact" class="site-btn">Browse</a>
 				</div>
 				<!-- popup video -->
 				<div class="intro-video">
@@ -376,7 +376,9 @@
 		</div>
 	</div>
 	<!-- Promotion section end-->
-	@include('partials.contactForm')
+	<div id="contact">
+		@include('partials.contactForm')
+	</div>
 
 	
 @endsection

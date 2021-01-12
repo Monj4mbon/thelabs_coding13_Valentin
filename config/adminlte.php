@@ -248,11 +248,11 @@ return [
         ['header' => 'CHANGE WEBSITE'],
         [
             'text' => 'navbar',
-            'url'  => '#',
+            'url'  => '/adminNavbar',
             'icon' => 'fas fa-fw fa-lock',
         ],
         [
-            'text'    => 'Home',
+            'text'    => 'Création',
             'icon'    => 'fas fa-fw fa-share',
             'submenu' => [
                 [
@@ -274,9 +274,25 @@ return [
             ],
         ],
         [
-            'text'    => 'Services',
+            'text'    => 'Modification du site',
             'icon'    => 'fas fa-fw fa-share',
             'submenu' => [
+                [
+                    'text' => 'Home',
+                    'url'  => '/adminServices',
+                ],
+                [
+                    'text' => 'Services',
+                    'url'  => '/adminServices',
+                ],
+                [
+                    'text' => 'Blog',
+                    'url'  => '/adminServices',
+                ],
+                [
+                    'text' => 'Contact',
+                    'url'  => '/adminServices',
+                ],
             ],
         ],
         [

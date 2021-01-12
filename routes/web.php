@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AccueilController;
+use App\Http\Controllers\NavbarController;
 use App\Http\Controllers\BanniereController;
 use App\Http\Controllers\ServicesCreateController;
 use App\Http\Controllers\TeamController;
@@ -17,6 +18,10 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::get('/adminNavbar', [NavbarController::class, 'index']);
+Route::get('/adminNavbarEdit/{id}', [NavbarController::class, 'edit']);
+Route::post('/adminNavbarUpdate/{id}', [NavbarController::class, 'update']);
 
 Route::get('/', function () {
     return view('accueil');

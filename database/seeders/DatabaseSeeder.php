@@ -18,6 +18,7 @@ class DatabaseSeeder extends Seeder
             ServicesCreateSeeder::class,
             BanniereSeeder::class,
             TeamSeeder::class,
+            NavbarSeeder::class,
         ]);
     }
 }
