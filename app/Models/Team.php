@@ -7,5 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Team extends Model
 {
+    public function temoignage(){
+        return $this->hasMany('App\Models\Temoignage');
+    }
     use HasFactory;
 }

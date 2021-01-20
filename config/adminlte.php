@@ -249,49 +249,65 @@ return [
         [
             'text' => 'navbar',
             'url'  => '/adminNavbar',
-            'icon' => 'fas fa-fw fa-lock',
+            'icon' => 'fas fa-directions',
         ],
         [
             'text'    => 'Création',
-            'icon'    => 'fas fa-fw fa-share',
+            'icon'    => 'fas fa-folder',
             'submenu' => [
                 [
                     'text' => 'Services',
                     'url'  => '/adminServices',
+                    'icon' => 'fas fa-vial',
+
                 ],
                 [
                     'text' => 'Banniere',
                     'url'  => '/adminBanniere',
+                    'icon' => 'fas fa-image',
+
                 ],
                 [
                     'text' => 'Team',
                     'url'  => '/adminTeam',
+                    'icon' => 'fas fa-users',
+
                 ],
                 [
                     'text' => 'Temoignage',
                     'url'  => '/adminTemoignage',
+                    'icon' => 'fas fa-comments',
+
                 ],
             ],
         ],
         [
             'text'    => 'Modification du site',
-            'icon'    => 'fas fa-fw fa-share',
+            'icon'    => 'fas fa-tools',
             'submenu' => [
                 [
                     'text' => 'Home',
                     'url'  => '/adminServices',
+                    'icon' => 'fas fa-home',
+
                 ],
                 [
                     'text' => 'Services',
                     'url'  => '/adminServices',
+                    'icon' => 'fas fa-concierge-bell',
+
                 ],
                 [
                     'text' => 'Blog',
                     'url'  => '/adminServices',
+                    'icon' => 'fas fa-blog',
+
                 ],
                 [
                     'text' => 'Contact',
                     'url'  => '/adminServices',
+                    'icon' => 'fas fa-file-contract',
+
                 ],
             ],
         ],

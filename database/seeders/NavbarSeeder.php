@@ -16,10 +16,20 @@ class NavbarSeeder extends Seeder
     {
         DB::table('navbars')->insert([
             [
-                'navAccueil' => 'Home',
-                'navServices' => 'Services',
-                'navBlog' => 'Blog',
-                'navContact' => 'Contact',
+                'name' => 'Home',
+                'view' => 'Home',
+            ],
+            [
+                'name' => 'Services',
+                'view' => 'Services',
+            ],
+            [
+                'name' => 'Blog',
+                'view' => 'Blog',
+            ],
+            [
+                'name' => 'Contact',
+                'view' => 'Contact',
             ],
         ]);
     }

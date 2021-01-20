@@ -19,6 +19,8 @@ class DatabaseSeeder extends Seeder
             BanniereSeeder::class,
             TeamSeeder::class,
             NavbarSeeder::class,
+            TemoignageSeeder::class,
+            UserSeeder::class,
         ]);
     }
 }

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Team;
 use App\Models\Temoignage;
 use Illuminate\Http\Request;
 
@@ -14,7 +15,7 @@ class TemoignageController extends Controller
      */
     public function index()
     {
-        //
+        return view('adminTemoignage');
     }
 
     /**
@@ -24,7 +25,9 @@ class TemoignageController extends Controller
      */
     public function create()
     {
-        //
+        $teamData = Team::all();
+        $temoignageData = Temoignage::all();
+        return view('adminTemoignage', compact('temoignageData', 'teamData'));
     }
 
     /**
@@ -35,7 +38,15 @@ class TemoignageController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'témoignageTexte' => "required",
+            'team_id' => "required",
+        ]);
+        $newTemoignage = new Temoignage;
+        $newTemoignage->témoignageTexte = $request->témoignageTexte;
+        $newTemoignage->team_id = $request->team_id;
+        $newTemoignage->save();
+        return redirect()->back();
     }
 
     /**
@@ -55,9 +66,11 @@ class TemoignageController extends Controller
      * @param  \App\Models\Temoignage  $temoignage
      * @return \Illuminate\Http\Response
      */
-    public function edit(Temoignage $temoignage)
+    public function edit($id)
     {
-        //
+        $teamData = Team::all();
+        $editTemoignage = Temoignage::find($id);
+        return view('adminTemoignageEdit', compact('editTemoignage', 'teamData'));
     }
 
     /**
@@ -67,9 +80,13 @@ class TemoignageController extends Controller
      * @param  \App\Models\Temoignage  $temoignage
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Temoignage $temoignage)
+    public function update(Request $request, $id)
     {
-        //
+        $updateTemoignage = Temoignage::find($id);
+        $updateTemoignage->témoignageTexte = $request->témoignageTexte;
+        $updateTemoignage->team_id = $request->team_id;
+        $updateTemoignage->save();
+        return redirect()->back();
     }
 
     /**
@@ -78,8 +95,10 @@ class TemoignageController extends Controller
      * @param  \App\Models\Temoignage  $temoignage
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Temoignage $temoignage)
+    public function destroy($id)
     {
-        //
+        $TemoignageDestroy = Temoignage::find($id);
+        $TemoignageDestroy->delete();
+        return redirect()->back();
     }
 }

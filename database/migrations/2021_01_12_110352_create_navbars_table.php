@@ -15,10 +15,8 @@ class CreateNavbarsTable extends Migration
     {
         Schema::create('navbars', function (Blueprint $table) {
             $table->id();
-            $table->string('navAccueil');
-            $table->string('navServices');
-            $table->string('navBlog');
-            $table->string('navContact');
+            $table->string('name');
+            $table->string('view');
             $table->timestamps();
         });
     }

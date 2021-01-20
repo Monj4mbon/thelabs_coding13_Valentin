@@ -5,6 +5,12 @@ use App\Http\Controllers\NavbarController;
 use App\Http\Controllers\BanniereController;
 use App\Http\Controllers\ServicesCreateController;
 use App\Http\Controllers\TeamController;
+use App\Http\Controllers\TemoignageController;
+use App\Models\Banniere;
+use App\Models\Navbar;
+use App\Models\ServicesCreate;
+use App\Models\Team;
+use App\Models\Temoignage;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -24,7 +30,12 @@ Route::get('/adminNavbarEdit/{id}', [NavbarController::class, 'edit']);
 Route::post('/adminNavbarUpdate/{id}', [NavbarController::class, 'update']);
 
 Route::get('/', function () {
-    return view('accueil');
+    $navbarData = Navbar::all();
+    $bannièreData = Banniere::all();
+    $servicesData = ServicesCreate::all();
+    $teamData = Team::all();
+    $temoignageData = Temoignage::all();
+    return view('accueil', compact('bannièreData', 'servicesData', 'teamData', 'temoignageData','navbarData'));
 });
 Route::get('/adminAccueil', [AccueilController::class, 'index']);
 
@@ -46,6 +57,13 @@ Route::post('/adminTeamStore', [TeamController::class, 'store']);
 Route::get('/adminTeamEdit/{id}', [TeamController::class, 'edit']);
 Route::post('/adminTeamUpdate/{id}', [TeamController::class, 'update']);
 Route::get('/adminTeamDestroy/{id}', [TeamController::class, 'destroy']);
+
+Route::get('/adminTemoignage', [TemoignageController::class, 'index']);
+Route::get('/adminTemoignage', [TemoignageController::class, 'create']);
+Route::post('/adminTemoignageStore', [TemoignageController::class, 'store']);
+Route::get('/adminTemoignageEdit/{id}', [TemoignageController::class, 'edit']);
+Route::post('/adminTemoignageUpdate/{id}', [TemoignageController::class, 'update']);
+Route::get('/adminTemoignageDestroy/{id}', [TemoignageController::class, 'destroy']);
 
 Route::get('/services', function () {
     return view('services');

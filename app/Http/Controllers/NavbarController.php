@@ -72,16 +72,10 @@ class NavbarController extends Controller
     public function update(Request $request, $id)
     {
         $request->validate([
-            'navAccueil'=>'required',
-            'navServices'=>'required',
-            'navBlog'=>'required',
-            'navContact'=>'required',
+            'name'=>'required',
         ]);
         $updateNavbar = Navbar::find($id);;
-        $updateNavbar->navAccueil = $request->navAccueil;
-        $updateNavbar->navServices = $request->navServices;
-        $updateNavbar->navBlog = $request->navBlog;
-        $updateNavbar->navContact = $request->navContact;
+        $updateNavbar->name = $request->name;
         $updateNavbar->save();
         return redirect('/adminNavbar');
     }
