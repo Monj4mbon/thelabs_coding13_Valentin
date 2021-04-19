@@ -16,10 +16,17 @@
   <div class="responsive"><i class="fa fa-bars"></i></div>
   <nav>
     <ul class="menu-list">
-      <li class="{{ Request::is('/') ? 'active' : '' }}"><a href="{{ url('/') }}/">Home</a></li>
-      <li class="{{ Request::is('services') ? 'active' : '' }}"><a href="{{ url('/services') }}">Services</a></li>
-      <li class="{{ Request::is('blog') ? 'active' : '' }}"><a href="{{ url('/blog') }}">Blog</a></li>
-      <li class="{{ Request::is('contact') ? 'active' : '' }}"><a href="{{ url('/contact') }}">Contact</a></li>
+      @foreach ($navbarData as $navbar)
+        @if ($navbar->view == 'Home')
+          <li class="{{ Request::is('/') ? 'active' : '' }}"><a href="{{ url('/') }}/">{{$navbar->name}}</a></li>
+        @elseif ($navbar->view == 'Services')
+          <li class="{{ Request::is('services') ? 'active' : '' }}"><a href="{{ url('/services') }}">{{$navbar->name}}</a></li>
+        @elseif ($navbar->view == 'Blog')
+          <li class="{{ Request::is('blog') ? 'active' : '' }}"><a href="{{ url('/blog') }}">{{$navbar->name}}</a></li>
+        @elseif ($navbar->view == 'Contact')
+          <li class="{{ Request::is('contact') ? 'active' : '' }}"><a href="{{ url('/contact') }}">{{$navbar->name}}</a></li>
+        @endif
+      @endforeach
     </ul>
   </nav>
 </header>

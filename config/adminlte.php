@@ -234,23 +234,7 @@ return [
             'url'  => 'admin/blog',
             'can'  => 'manage-blog',
         ],
-        ['header' => 'account_settings'],
-        [
-            'text' => 'profile',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-user',
-        ],
-        [
-            'text' => 'change_password',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-lock',
-        ],
         ['header' => 'CHANGE WEBSITE'],
-        [
-            'text' => 'navbar',
-            'url'  => '/adminNavbar',
-            'icon' => 'fas fa-directions',
-        ],
         [
             'text'    => 'Création',
             'icon'    => 'fas fa-folder',
@@ -259,25 +243,31 @@ return [
                     'text' => 'Services',
                     'url'  => '/adminServices',
                     'icon' => 'fas fa-vial',
-
                 ],
                 [
                     'text' => 'Banniere',
                     'url'  => '/adminBanniere',
                     'icon' => 'fas fa-image',
-
                 ],
                 [
                     'text' => 'Team',
                     'url'  => '/adminTeam',
                     'icon' => 'fas fa-users',
-
                 ],
                 [
                     'text' => 'Temoignage',
                     'url'  => '/adminTemoignage',
                     'icon' => 'fas fa-comments',
-
+                ],
+                [
+                    'text' => 'Logo',
+                    'url'  => '/adminLogo',
+                    'icon' => 'fas fa-ad',
+                ],
+                [
+                    'text' => 'Blog',
+                    'url'  => '/adminBlog',
+                    'icon' => 'fas fa-blog',
                 ],
             ],
         ],
@@ -287,34 +277,35 @@ return [
             'submenu' => [
                 [
                     'text' => 'Home',
-                    'url'  => '/adminServices',
+                    'url'  => '/adminHomeView',
                     'icon' => 'fas fa-home',
-
                 ],
                 [
                     'text' => 'Services',
-                    'url'  => '/adminServices',
+                    'url'  => '/adminServicesView',
                     'icon' => 'fas fa-concierge-bell',
-
-                ],
-                [
-                    'text' => 'Blog',
-                    'url'  => '/adminServices',
-                    'icon' => 'fas fa-blog',
-
                 ],
                 [
                     'text' => 'Contact',
-                    'url'  => '/adminServices',
+                    'url'  => '/adminContactView',
                     'icon' => 'fas fa-file-contract',
-
                 ],
             ],
         ],
         [
-            'text'    => 'Blog',
-            'icon'    => 'fas fa-fw fa-share',
+            'text'    => 'Communs aux pages',
+            'icon'    => 'fas fa-store',
             'submenu' => [
+                [
+                    'text' => 'Navbar',
+                    'url'  => '/adminNavbar',
+                    'icon' => 'fas fa-directions',
+                ],
+                [
+                    'text' => 'Contact Form',
+                    'url'  => '/adminContactForm',
+                    'icon' => 'fas fa-envelope',
+                ],
             ],
         ],
         [

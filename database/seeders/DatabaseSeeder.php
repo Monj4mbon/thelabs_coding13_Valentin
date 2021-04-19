@@ -14,13 +14,17 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $this->call([
-        // 	AccueilSeeder::class,
             ServicesCreateSeeder::class,
             BanniereSeeder::class,
             TeamSeeder::class,
             NavbarSeeder::class,
             TemoignageSeeder::class,
             UserSeeder::class,
+            LogoSeeder::class,
+            HomeModifSeeder::class,
+            ServicesSeeder::class,
+            ContactFormSeeder::class,
+            BlogSeeder::class,
         ]);
     }
 }
